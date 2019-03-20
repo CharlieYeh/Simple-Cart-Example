@@ -4,22 +4,26 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- CSS -->
-        <link rel="stylesheet" href="css/css_reset.css" type="text/css"/>
-        <link rel="stylesheet" href="css/animate1705.css" type="text/css"/>
-        <link rel="stylesheet" type="text/css" href="css/component.css" />
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css"href="css/css_reset.css"/>
+	    
+	<link rel="stylesheet" type="text/css" href="dist/client/assets/common.css"/>
+        <link rel="stylesheet" type="text/css" href="dist/client/assets/component.css"/>
+	    
         <!-- JavaScript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/Object1705_Cart.js"></script>
-        <script type="text/javascript" src="js/shopping-cart.js"></script>
-        <title>Object1705_index</title>
+	    
+        <script src="dist/client/assets/cart-common.js"></script>
+        <script src="dist/client/assets/cart-func.js">  </script>
+	    
+        <title>Simple Cart Example</title>
     </head>
     <body>
         <nav class="navbar" style="padding:12px;" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
-					<a class="navbar-brand" href="#" style="padding:10px 25px;">NKMU_beta.ver</a>
+			<a class="navbar-brand" href="#" style="padding:10px 25px;">NKMU_beta.ver</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav nav-tabs">
@@ -77,29 +81,29 @@
             <article>
                 <div class="container">
                     <div class="tab-content">
-<!-- ============== Home ============== -->
+<!--  Home  -->
                         <div id="home" class="tab-pane fade in active">
                             <img src="img/image/home_0.png" style="height: 80vh;">
                             <div class="carousel-caption" style="top:250px;left:-605px; text-shadow: 2px 3px 13px #000000;">
                             </div>
                         </div>
-<!-- ============== Menu1 ============== -->
+<!-- Menu1  News -->
                         <div id="menu1" class="tab-pane fade">
                             <img src="img/image/Sony.png" style="height: 80vh;">
                         </div>
-<!-- ============== Menu2 ============== -->
+<!-- Menu2  Services -->
                         <div id="menu2" class="tab-pane fade">
                             <h3>Services</h3>
                             <p>Some content in Services...</p>
                         </div>
-<!-- ============== Menu3 ============== -->
+<!-- Menu3  Products -->
                         <div id="menu3" class="tab-pane fade"></div>
-<!-- ============== Menu4 ============== -->
+<!-- Menu4  Contact -->
                         <div id="menu4" class="tab-pane fade">
                             <h3>Contact</h3>
                             <p>Some content in Contact...</p>
                         </div>
-<!-- ============== Menu5 ============== -->
+<!-- Menu5  Shopping Cart -->
                         <div id="menu5" class="tab-pane fade">
                             <h3>Shopping Cart / Trolley</h3>
                             <table class="mytable table table-hover" ng-show="items.length">
@@ -120,7 +124,7 @@
                             <div class="total">已選商品：<span> N/A</span></div>
                             <div class="total">合計：<span class=" mark" ng-show="getTotalAmount()<15000">N/A</span></div>
                         </div>
-<!-- ============== Menu6 ============== -->
+<!-- Menu6  Login Page -->
                         <div id="menu6" class="tab-pane fade">
                             <link rel="stylesheet" href="css/login.css" type="text/css" />
                             <div class="login-page">
@@ -135,7 +139,7 @@
                                 </div>
                             </div>
                         </div>
-<!-- ============== Menu7 ============== -->
+<!-- Menu7  Admin-Info -->
                         <div id="menu7" class="tab-pane fade">
                             <h3>Admin - Info</h3>
                             <p>Some content in Contact...</p>
@@ -145,7 +149,11 @@
         </section>
     </body>
 </html>
-<!--
+	
+	
+	
+<!-- 
+   ※※※
                     <ul class="nav-navbar nav nav-tabs navbar-right">
 						<li class="active">
 							<a href="#">

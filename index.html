@@ -1,1 +1,187 @@
-
+<!DOCTYPE html>
+<html lang="en" ng-app="cart">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/css_reset.css" type="text/css"/>
+        <link rel="stylesheet" href="css/animate1705.css" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/Object1705_Cart.js"></script>
+        <script type="text/javascript" src="js/shopping-cart.js"></script>
+        <title>Object1705_index</title>
+    </head>
+    <body>
+        <nav class="navbar" style="padding:12px;" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+					<a class="navbar-brand" href="#" style="padding:10px 25px;">NKMU_beta.ver</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav nav-tabs">
+                        <li><a data-toggle="tab" href="#home">Home</a></li>
+                        <li><a data-toggle="tab" href="#menu1">News</a></li>
+                        <li><a data-toggle="tab" href="#menu2">Services</a></li>
+                        <li><a data-toggle="tab" href="#menu3">Product</a></li>
+                        <li><a data-toggle="tab" href="#menu4">Contact</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Other
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">First</a></li>
+                                <li><a href="#">Second</a></li>
+                                <li><a href="#">Third</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <form class="form-inline" style="padding:7px;">
+                                <!-- <input type="text" class="input-small" placeholder="Email"> -->
+                                <input type="text" class="css-input"  placeholder=" Search">
+                            </form>
+                        </li>
+                        <li class="full navbar-right"><a href="#" data-toggle="dropdown"> Menu <span class="caret"></span></a></li>
+                            <div class="dropdown-menu" role="menu" style="width:586px; height:177px; border-color:#919aff;">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="img/image/N1.png" alt="###"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="img/image/N2.jpg" alt="###"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="thumbnail">
+                                                <a href="#"><img src="img/image/N3.png" alt="###"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <li class="navbar-right"><a data-toggle="tab" href="#menu7"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+                        <li class="navbar-right"><a data-toggle="tab" href="#menu6"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li class="navbar-right"><a data-toggle="tab" href="#menu5"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <article>
+                <div class="container">
+                    <div class="tab-content">
+<!-- ============== Home ============== -->
+                        <div id="home" class="tab-pane fade in active">
+                            <img src="img/image/home_0.png" style="height: 80vh;">
+                            <div class="carousel-caption" style="top:250px;left:-605px; text-shadow: 2px 3px 13px #000000;">
+                            </div>
+                        </div>
+<!-- ============== Menu1 ============== -->
+                        <div id="menu1" class="tab-pane fade">
+                            <img src="img/image/Sony.png" style="height: 80vh;">
+                        </div>
+<!-- ============== Menu2 ============== -->
+                        <div id="menu2" class="tab-pane fade">
+                            <h3>Services</h3>
+                            <p>Some content in Services...</p>
+                        </div>
+<!-- ============== Menu3 ============== -->
+                        <div id="menu3" class="tab-pane fade"></div>
+<!-- ============== Menu4 ============== -->
+                        <div id="menu4" class="tab-pane fade">
+                            <h3>Contact</h3>
+                            <p>Some content in Contact...</p>
+                        </div>
+<!-- ============== Menu5 ============== -->
+                        <div id="menu5" class="tab-pane fade">
+                            <h3>Shopping Cart / Trolley</h3>
+                            <table class="mytable table table-hover" ng-show="items.length">
+                                <caption>客戶購物車清單</caption>
+                                <thead>
+                                  <tr>
+                                    <th>Id. Product</th>
+                                    <th>Info. Product</th>
+                                    <th>Price（USD）</th>
+                                    <th>Amt. Product</th>
+                                    <th>Total（USD）</th>
+                                    <th>Delete</th>
+                                  </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <div class="empty" ng-show="!items.length">No such information ...</div>
+                            <div class="total">已選商品：<span> N/A</span></div>
+                            <div class="total">合計：<span class=" mark" ng-show="getTotalAmount()<15000">N/A</span></div>
+                        </div>
+<!-- ============== Menu6 ============== -->
+                        <div id="menu6" class="tab-pane fade">
+                            <link rel="stylesheet" href="css/login.css" type="text/css" />
+                            <div class="login-page">
+                                <div class="form">
+                                <form class="login-form">
+                                    <input type="text" placeholder="username"/>
+                                    <input type="password" placeholder="password"/>
+                                    <button>login</button>
+                                    <p class="message">Not registered ? <a href="#">Create an account</a></p>
+                                    <p class="message"><a href="#"> 「Back to Home Page」</a></p>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+<!-- ============== Menu7 ============== -->
+                        <div id="menu7" class="tab-pane fade">
+                            <h3>Admin - Info</h3>
+                            <p>Some content in Contact...</p>
+                        </div>
+                </div>
+            </article>
+        </section>
+    </body>
+</html>
+<!--
+                    <ul class="nav-navbar nav nav-tabs navbar-right">
+						<li class="active">
+							<a href="#">
+                                <span aria-hidden="true" class="glyphicon glyphicon-home"></span>
+                                <br>Home
+                            </a>
+						</li>
+						<li>
+							<a href="#">
+                                <span aria-hidden="true" class="icon_camera"></span>
+                                <br>Portfolio
+                            </a>
+						</li>
+						<li>
+							<a href="#">
+                                <span aria-hidden="true" class="icon_comment"></span>
+                                <br>Blog
+                            </a>
+						</li>
+						<li>
+							<a href="#">
+                                <span aria-hidden="true" class="icon_tools"></span>
+                                <br>Services
+                            </a>
+						</li>
+						<li>
+							<a href="#">
+                                <span aria-hidden="true" class="icon_profile"></span>
+                                <br>About
+                            </a>
+						</li>
+						<li>
+							<a href="#">
+                                <span aria-hidden="true" class="icon_mail"></span>
+                                <br>Contact
+                            </a>
+						</li>
+                    </ul>
+-->

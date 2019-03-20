@@ -1,3 +1,3 @@
 # Simple-Cart-Example
 
-#####<del>[Online Demo]</del>
+##### <del>[Online Demo]</del>
